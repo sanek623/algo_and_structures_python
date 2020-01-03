@@ -7,7 +7,7 @@ A = int(input('Введите первое число: '))
 B = int(input('Введите второе число: '))
 C = int(input('Введите третье число: '))
 
-if A > B > C or C > B > A:
+if A > B > C or C > B > A or A == B == C:
     print('Средним числом является число', B)
 elif B > A > C or C > A > B:
     print('Средним числом является число', A)
