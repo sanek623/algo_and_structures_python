@@ -9,3 +9,26 @@
 Также сообщать пользователю о невозможности деления на ноль,
 если он ввел 0 в качестве делителя.
 """
+import sys
+
+while True:
+    try:
+        NUM_1 = int(input('Введите первое число: '))
+        NUM_2 = int(input('Введите второе число: '))
+        SIGN = input('Введите знак "+", "-", "*", "/": ')
+
+        if SIGN == '+':
+            print(NUM_1 + NUM_2)
+        elif SIGN == '-':
+            print(NUM_1 - NUM_2)
+        elif SIGN == '*':
+            print(NUM_1 * NUM_2)
+        elif SIGN == '/':
+            print(NUM_1 / NUM_2)
+        elif SIGN == '0':
+            print('Досвидания')
+            sys.exit(1)
+        else:
+            print('Данные не корректны!')
+    except ZeroDivisionError:
+        print('На 0 делить нельзя!')
